@@ -4,7 +4,7 @@ This repository contains the source code for a digital storybook titled "Sara Lo
 
 ## Live Demo
 
-Check out the live demo [here](https://nethra1619.github.io/book/).
+Check out the live demo [here](https://nethra1619.github.io/Book/).
 
 ## Project Structure
 
@@ -18,11 +18,11 @@ The project consists of the following files:
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/nethra1619/book.git
+    git clone https://github.com/nethra1619/Book.git
     ```
 2. **Navigate to the project directory:**
     ```bash
-    cd book
+    cd Book
     ```
 3. **Open `index.html` in your browser:**
     ```bash
