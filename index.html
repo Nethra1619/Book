@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sara Love</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        .book { max-width: 800px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: #f9f9f9; }
+        .page { display: none; }
+        .page.active { display: block; }
+        .chapter h2 { font-size: 1.5em; color: #333; }
+        .chapter p { font-size: 1.1em; color: #555; }
+        .navigation { margin-top: 20px; text-align: center; }
+        .navigation button { padding: 10px 20px; font-size: 1em; }
+    </style>
+</head>
+<body>
+    <div class="book">
+        <div class="page active" id="page1">
+            <h1>Sara Love</h1>
+        </div>
+        <div class="page" id="page2">
+            <div class="chapter">
+                <h2>First Day at College</h2>
+                <p>On July 3, it was my first day at college. I quickly became close with Arthy, and she pointed out a senior in our class. "Look, doesn't he look like our senior?" she said. She dared me to go talk to him, and when I turned to look, there he was, making a grand entrance like a hero, tan tan tan taaaaan.</p>
+            </div>
+        </div>
+        <div class="page" id="page3">
+            <div class="chapter">
+                <h2>Initial Thoughts</h2>
+                <p>At first, I wondered, "Where will I find friends to talk to?" Similarly, he probably thought, "Where will I find girls to talk to?" As days went by, we started a "friends forever" group, and the two of us joined and began talking. It was the beginning of an unexpected friendship.</p>
+            </div>
+        </div>
+        <div class="page" id="page4">
+            <div class="chapter">
+                <h2>Bonding and Growing Closer</h2>
+                <p>Due to certain circumstances, we began to talk more and more, and now, we are best friends. Our friendship grew from strangers to brothers to friends to best friends. Now we are like family. I see him as a part of my family.</p>
+            </div>
+        </div>
+        <div class="page" id="page5">
+            <div class="chapter">
+                <h2>Unexpected Care</h2>
+                <p>When I first met him, I never imagined that he would take care of me like a father and care for me like a mother. It’s like meeting many souls in one body. His presence in my life is invaluable, and he has become someone I deeply cherish.</p>
+            </div>
+        </div>
+        <div class="page" id="page6">
+            <div class="chapter">
+                <h2>Forever Friends</h2>
+                <p>Our bond is strong, and despite the ups and downs, our friendship continues to grow. We support each other in everything, and he is always there for me, just as I am for him. Our friendship is a beautiful journey, one that I hope will last forever.</p>
+            </div>
+        </div>
+        <div class="page" id="page7">
+            <h2>To Be Continued...</h2>
+        </div>
+        <div class="navigation">
+            <button onclick="prevPage()">Previous</button>
+            <button onclick="nextPage()">Next</button>
+        </div>
+    </div>
+
+    <script>
+        let currentPage = 1;
+        const totalPages = 7;
+
+        function showPage(page) {
+            document.querySelectorAll('.page').forEach((p, index) => {
+                p.classList.toggle('active', index + 1 === page);
+            });
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        }
+    </script>
+</body>
+</html>
