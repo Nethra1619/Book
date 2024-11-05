@@ -9,8 +9,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); /* Importing a stylish font */
 
         body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f9f9f9; }
-        .book { width: 800px; height: 600px; margin: 50px auto; background: #fef9e7; /* Pale yellow background */ }
-        .page { width: 400px; height: 600px; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: white; }
+        .book { width: 800px; height: 500px; margin: 50px auto; }
+        .page { width: 400px; height: 500px; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: #fef9e7; /* Pale yellow background */ }
         .page h1 { font-family: 'Lobster', cursive; font-size: 3em; color: #333; } /* Applying the stylish font */
         .page h2 { font-size: 1.5em; color: #333; }
         .page p { font-size: 1.1em; color: #555; }
@@ -54,11 +54,12 @@
         $(document).ready(function() {
             $('#flipbook').turn({
                 width: 800,
-                height: 600,
+                height: 500,
                 autoCenter: true,
                 elevation: 50,
                 gradients: true,
-                duration: 1000
+                duration: 1000,
+                display: 'double' // Ensure pages are displayed like a book
             });
         });
 
