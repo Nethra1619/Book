@@ -10,14 +10,14 @@
 
         body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f9f9f9; }
         .book { width: 800px; height: 600px; margin: 50px auto; background: #fef9e7; /* Pale yellow background */ }
-        .page { padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: white; }
+        .page { width: 400px; height: 600px; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background: white; }
         .page h1 { font-family: 'Lobster', cursive; font-size: 3em; color: #333; } /* Applying the stylish font */
         .page h2 { font-size: 1.5em; color: #333; }
         .page p { font-size: 1.1em; color: #555; }
     </style>
 </head>
 <body>
-    <div class="book" id="flipbook">
+    <div id="flipbook" class="book">
         <div class="page"><h1>Sara Love</h1></div>
         <div class="page">
             <h2>First Day at College</h2>
@@ -46,13 +46,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
     <script>
         $(document).ready(function() {
-            $("#flipbook").turn({
+            $('#flipbook').turn({
                 width: 800,
                 height: 600,
                 autoCenter: true,
-                elevation: 50, // Adds a 3D shadow during flip
-                gradients: true, // Enables gradients for 3D effect
-                duration: 1000 // Flip animation duration in milliseconds
+                elevation: 50,
+                gradients: true,
+                duration: 1000
             });
         });
     </script>
